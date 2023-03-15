@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.w3blog.zpl.constant.ZebraFont;
+import fr.w3blog.zpl.constant.ZebraPPP;
 import fr.w3blog.zpl.constant.ZebraPaperType;
 import fr.w3blog.zpl.constant.ZebraPrintMode;
 import fr.w3blog.zpl.utils.ZplUtils;
@@ -57,6 +58,19 @@ public class ZebraLabel {
 		this.heightDots = heightDots;
 	}
 
+	/**
+	 * Create label with size
+	 *
+	 * @param heightCm
+	 *            height explain in CM
+	 * @param widthCm
+	 *            width explain in CM
+	 */
+	public ZebraLabel(float widthCm, float heightCm) {
+		super();
+		this.widthDots = (int) Math.round(widthCm * ZebraPPP.DPI_203.getDotByCm()/ 2.54);
+		this.heightDots = (int) Math.round(heightCm * ZebraPPP.DPI_203.getDotByCm()/ 2.54);
+	}
 	/**
 	 * 
 	 * @param heightDots

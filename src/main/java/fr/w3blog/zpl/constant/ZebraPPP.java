@@ -8,11 +8,11 @@ package fr.w3blog.zpl.constant;
  */
 public enum ZebraPPP {
 
-	DPI_203(8), DPI_300(12), DPI_600(23.5F);
+	DPI_203(8), DPI_300(12), DPI_600(24);
 
 	private float dotByMm;
 
-	private ZebraPPP(float dotByMm) {
+	ZebraPPP(float dotByMm) {
 		this.dotByMm = dotByMm;
 	}
 
@@ -21,5 +21,8 @@ public enum ZebraPPP {
 	 */
 	public float getDotByMm() {
 		return dotByMm;
+	}
+	public float getDotByCm() {
+		return dotByMm*10;
 	}
 }

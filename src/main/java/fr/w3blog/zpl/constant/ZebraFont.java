@@ -47,9 +47,6 @@ public enum ZebraFont {
 	{
 		ZebraFont myFont = ZebraFont.ZEBRA_ZERO;
 		switch(letter){
-			case "0" :
-				myFont = ZebraFont.ZEBRA_ZERO;
-				break;
 			case "A" :
 				myFont = ZebraFont.ZEBRA_A;
 				break;
